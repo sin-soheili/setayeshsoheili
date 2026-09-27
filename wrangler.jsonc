@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "setayesh-soheili",
+  "compatibility_date": "2026-09-01",
+  // Static export only: the Worker just serves ./out (no server runtime needed).
+  "assets": {
+    "directory": "./out",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  // Requires the setayesh-soheili.ir zone to be on the same Cloudflare account.
+  "routes": [{ "pattern": "setayesh-soheili.ir", "custom_domain": true }]
+}

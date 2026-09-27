@@ -1,0 +1,9 @@
+CLAUDE.local.md
+node_modules/
+.next/
+out/
+.wrangler/
+next-env.d.ts
+*.tsbuildinfo
+.env*
+manishj.dev/
