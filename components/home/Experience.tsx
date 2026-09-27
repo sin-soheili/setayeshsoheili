@@ -8,7 +8,7 @@ export function ExperienceTimeline({ items, lang }: { items: ExperienceEntry[] |
   return (
     <div className="relative flex flex-col">
       {items.map((e, i) => (
-        <div key={e.title} className="group relative flex gap-6 pb-10 last:pb-0 sm:gap-8 sm:pb-12">
+        <div key={e.title.en} className="group relative flex gap-6 pb-10 last:pb-0 sm:gap-8 sm:pb-12">
           <div className="relative flex w-4 shrink-0 flex-col items-center pt-1.5">
             <div className="z-10 size-3 border-2 border-line-strong bg-bg transition-all group-hover:scale-110 group-hover:border-fg" />
             {i < items.length - 1 && <div className="absolute bottom-0 top-5 w-px bg-line" />}
@@ -17,8 +17,8 @@ export function ExperienceTimeline({ items, lang }: { items: ExperienceEntry[] |
             <div className="pt-0.5 font-mono text-[13px] tabular-nums text-muted lg:col-span-3">{e.period[lang]}</div>
             <div className="lg:col-span-9">
               <div className="flex flex-wrap items-baseline gap-x-2">
-                <h3 dir="ltr" className="text-[16px] font-semibold text-fg sm:text-[18px]">
-                  {e.title}
+                <h3 className="text-[16px] font-semibold text-fg sm:text-[18px]">
+                  {e.title[lang]}
                 </h3>
                 {e.org && (
                   <>

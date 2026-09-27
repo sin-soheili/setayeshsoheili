@@ -13,6 +13,19 @@ export const projects: Project[] | null = [
     tags: ['Telegram', 'Automation', 'Web'],
     stack: ['Python', 'Pyrogram', 'Telegram'],
     repo: 'ChatPack',
+    media: {
+        src: '/images/work/chatpack/backpack.webp',
+        alt: {
+          fa: 'رابط کاربری ChatPack',
+          en: 'ChatPack user interface',
+        },
+        width: 446,
+        height: 481,
+        caption: {
+          fa: 'بخشی از رابط کاربری و قابلیت‌های ChatPack.',
+          en: 'A look at the ChatPack interface and its features.',
+        },
+      },
     summary: {
       fa: 'مجموعه‌ای از ابزارها و زیرساخت‌ها برای ساخت تجربه‌های تعاملی در ربات‌های پیام‌رسان.',
       en: 'A collection of tools and infrastructure for building interactive experiences in messaging bots.',

@@ -1,8 +1,9 @@
 import type { Education, Experience, Language, SkillGroup } from './types'
 
 export const experience: Experience[] | null = [
+
   {
-    title: 'Software Engineer',
+    title: { fa: 'مهندس نرم‌افزار', en: 'Software Engineer' },
     org: { fa: 'فریلنس / مستقل', en: 'Freelance / Independent' },
     period: { fa: '2024 — اکنون', en: '2024 — PRESENT' },
     description: {
@@ -10,12 +11,24 @@ export const experience: Experience[] | null = [
       en: 'Designing and developing software, backend systems, messaging bots, automation workflows, APIs, and web applications for real-world projects.',
     },
   },
+
   {
-    title: 'Software Development',
-    period: { fa: 'پروژه‌های منتخب', en: 'SELECTED PROJECTS' },
+    title: { fa: 'مدرس آزاد برنامه‌نویسی', en: 'Freelance Programming Instructor' },
+    org: { fa: 'آموزش آزاد', en: 'Independent Teaching' },
+    period: { fa: '۱۴۰۲ — اکنون', en: '2023 — PRESENT' },
     description: {
-      fa: 'تجربه‌ی ساخت پروژه‌های مختلف از ربات و automation تا وب‌سایت، API و سیستم‌های داخلی.',
-      en: 'Hands-on experience building different projects, from bots and automation to websites, APIs, and internal systems.',
+      fa: 'آموزش آزاد برنامه‌نویسی با تمرکز بر Python و توسعه‌ی Frontend، همراه با آموزش مفاهیم و پیاده‌سازی پروژه‌محور.',
+      en: 'Independent programming instruction focused on Python and frontend development, combining core concepts with project-based implementation.',
+    },
+  },
+
+  {
+    title: { fa: 'مؤسس و مدیر شرکت', en: 'Founder & Managing Director' },
+    org: { fa: 'نیک پیوند نوین هیرکان', en: 'Nik Peyvand Novin Hirkan' },
+    period: { fa: '۱۴۰۳ — اکنون', en: '2024 — PRESENT' },
+    description: {
+      fa: 'تأسیس و فعالیت در زمینه‌ی طراحی و توسعه‌ی نرم‌افزار، وب‌سایت و ربات‌های پیام‌رسان.',
+      en: 'Founded and operating a software development company focused on designing and developing software, websites, and messaging bots.',
     },
   },
 ]

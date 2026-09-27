@@ -46,7 +46,7 @@ export type Certificate = {
 }
 
 export type Experience = {
-  title: string
+  title: Localized
   org?: Localized | null
   period: Localized
   description: Localized
