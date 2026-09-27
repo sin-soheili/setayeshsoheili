@@ -41,10 +41,10 @@ export function Hero({ lang, t, featured, stats }: Props) {
               {profile.summary[lang]}
             </p>
             <div className="mt-[28px] flex w-full flex-wrap items-center gap-3.5 sm:mt-[32px] sm:w-auto">
-              <HeroButton href={`/${lang}/work`} icon="↗" primary>
+              <HeroButton href={`/${lang}/work`} icon='' >
                 {t.hero.viewProjects}
               </HeroButton>
-              <HeroButton href={`/${lang}/resume`} icon="→">
+              <HeroButton href={`/${lang}/resume`} icon='' >
                 {t.hero.resume}
               </HeroButton>
             </div>
