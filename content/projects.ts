@@ -33,6 +33,48 @@ export const projects: Project[] | null = [
     links: [{ label: { fa: 'PyPI', en: 'PyPI' }, href: 'https://pypi.org/project/chatpack-ui/' }],
   },
   {
+    slug: 'animasync',
+
+    title: 'AnimaSync',
+
+    kind: 'open-source',
+
+    domain: 'Animation',
+
+    group: 'selected',
+
+    featured: true,
+
+    tags: ['Animation', 'Lip Sync', 'Open Source'],
+
+    stack: ['React', 'Web Audio', 'JavaScript'],
+
+    repo: 'AnimaSync',
+
+    media: {
+        src: '/images/work/animasync/desktop.webp',
+        alt: {
+          fa: 'رابط کاربری AnimaSync',
+          en: 'AnimaSync user interface',
+        },
+        width: 1280,
+        height: 900,
+        caption: {
+          fa: 'بخشی از رابط کاربری و قابلیت‌های AnimaSync.',
+          en: 'A look at the AnimaSync interface and its features.',
+        },
+      },
+
+    summary: {
+
+      fa: 'یک ابزار سبک برای ساخت lip-sync در انیمیشن‌های دوبعدی؛ با تمرکز روی کنترل فریم‌ها و یک workflow ساده برای صدا، پیش‌نمایش و خروجی.',
+
+      en: 'A lightweight tool for 2D animation lip-sync, focused on frame control and a simple workflow for audio, preview, and export.',
+
+    },
+
+  },
+  {
     slug: 'safepad',
     title: 'SafePad',
     kind: 'open-source',
@@ -96,17 +138,31 @@ export const projects: Project[] | null = [
     },
   },
   {
-    slug: 'mope',
-    title: 'Mope',
+    slug: 'ghararcafe',
+    title: 'کافه قرار',
+    kind: 'client',
     domain: 'Web',
-    group: 'earlier',
-    tags: ['Map', 'To-do'],
-    stack: ['Leaflet.js', 'HTML', 'CSS', 'JavaScript'],
-    repo: 'Mope',
+    group: 'selected',
+    featured: true,
+    tags: ['Digital Menu', 'Django', 'Tailwind'],
+    stack: ['Python', 'Django', 'Tailwind CSS'],
     summary: {
-      fa: 'یک برنامه‌ی تودو روی نقشه‌ی تعاملی؛ کارها به مکان‌ها وصل می‌شوند.',
-      en: 'A to-do app on an interactive map, where tasks are attached to places.',
+      fa: 'منوی آنلاین اختصاصی کافه قرار، همراه با پنل مدیریت برای مدیریت آیتم‌ها، دسته‌بندی‌ها، قیمت‌ها و محتوای منو.',
+      en: 'A custom digital menu for Gharar Cafe, with a dedicated management panel for managing menu items, categories, prices, and content.',
     },
-    live: 'https://mope-map.netlify.app/',
-  },
+    live: 'https://ghararcafe.ir/',
+    media: {
+        src: '/images/work/ghararcafe/desktop.webp',
+        alt: {
+          fa: 'رابط کاربری کافه قرار',
+          en: 'Gharar Cafe user interface',
+        },
+        width: 1849,
+        height: 929,
+        caption: {
+          fa: 'بخشی از رابط کاربری و قابلیت‌های Gharar Cafe.',
+          en: 'A look at the Gharar Cafe interface and its features.',
+        },
+      },
+  }
 ]
