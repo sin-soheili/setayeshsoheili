@@ -3,7 +3,7 @@ import type { IconName } from '@/components/ui/Icon'
 import type { Locale } from './i18n'
 import { github } from './github'
 
-const icons: Record<string, IconName> = { Email: 'mail', GitHub: 'github', Telegram: 'send', 'Developer channel': 'megaphone', LinkedIn: 'arrowUpRight' }
+const icons: Record<string, IconName> = { Email: 'mail', GitHub: 'github', Telegram: 'send', 'Developer channel': 'megaphone', LinkedIn: 'arrowUpRight', Instagram: 'instagram' }
 
 export type Social = { label: string; href: string; icon: IconName }
 

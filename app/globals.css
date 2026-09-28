@@ -162,8 +162,13 @@
 }
 
 @utility ticker-pause {
-  &:hover,
-  &:focus-within {
+  /* Touch taps leave sticky :hover and focus on the tapped link across navigations. */
+  @media (hover: hover) {
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+  &:has(:focus-visible) {
     animation-play-state: paused;
   }
 }

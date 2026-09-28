@@ -171,7 +171,10 @@ const fa = {
     languages: 'زبان‌ها',
     certificates: 'گواهی‌نامه‌ها',
     print: 'چاپ / ذخیره به PDF',
-    view: 'مشاهده',
+    verify: 'تأیید اعتبار',
+    pdf: 'PDF',
+    preview: 'پیش‌نمایش',
+    close: 'بستن',
   },
 
   command: {
@@ -373,7 +376,10 @@ const en: typeof fa = {
     languages: 'Languages',
     certificates: 'Certificates',
     print: 'Print / Save as PDF',
-    view: 'View',
+    verify: 'Verify',
+    pdf: 'PDF',
+    preview: 'Preview',
+    close: 'Close',
   },
 
   command: {

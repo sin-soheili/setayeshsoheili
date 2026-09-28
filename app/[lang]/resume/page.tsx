@@ -6,12 +6,14 @@ import { education, experience, languages, skills } from '@/content/resume'
 import { personJsonLd } from '@/lib/jsonld'
 import { pageMetadata } from '@/lib/metadata'
 import { langParams, resolveLang, type LangParams } from '@/lib/params'
-import { displayUrl, hasItems } from '@/lib/utils'
+import { sized } from '@/lib/image-size'
+import { hasItems } from '@/lib/utils'
 import { Container, JsonLd, Kicker } from '@/components/ui/primitives'
 import { IndexHeader } from '@/components/ui/IndexHeader'
 import { ExperienceTimeline } from '@/components/home/Experience'
 import { CapabilityGrid } from '@/components/home/Capabilities'
 import { PrintButton } from '@/components/resume/PrintButton'
+import { CertificatePreview } from '@/components/resume/CertificatePreview'
 
 export const generateStaticParams = langParams
 
@@ -19,6 +21,8 @@ export async function generateMetadata({ params }: LangParams): Promise<Metadata
   const { lang, t } = await resolveLang(params)
   return pageMetadata({ lang, path: '/resume', title: t.resume.title, description: t.resume.description })
 }
+
+const linkClass = 'inline-flex items-center gap-1.5 text-fg underline decoration-line-strong underline-offset-4 hover:decoration-fg'
 
 function Block({ title, children }: { title: string; children: ReactNode }) {
   return (
@@ -56,7 +60,7 @@ export default async function ResumePage({ params }: LangParams) {
             <ul className="flex flex-col gap-6">
               {education.map((e) => (
                 <li key={e.degree.en} className="grid gap-2 lg:grid-cols-12 lg:gap-6">
-                  <span className="font-mono text-[13px] text-muted lg:col-span-3">{e.period}</span>
+                  <span className="font-mono text-[13px] text-muted lg:col-span-3">{e.period?.[lang]}</span>
                   <div className="lg:col-span-9">
                     <h3 className="text-[16px] font-semibold text-fg sm:text-[18px]">{e.degree[lang]}</h3>
                     <p className="mt-1 text-[15px] text-secondary">
@@ -89,17 +93,29 @@ export default async function ResumePage({ params }: LangParams) {
           <Block title={t.resume.certificates}>
             <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
               {certificates.map((c) => (
-                <li key={`${c.issuer}-${c.title.en}`} className="border border-line bg-card p-5">
+                <li key={`${c.issuer}-${c.title.en}`} className="flex flex-col border border-line bg-card p-5">
+                  {c.image && (
+                    <div className="mb-4 print:hidden">
+                      <CertificatePreview image={sized(c.image)} lang={lang} title={c.title[lang]} previewLabel={t.resume.preview} closeLabel={t.resume.close} />
+                    </div>
+                  )}
                   <div className="flex items-baseline justify-between gap-4">
                     <h3 className="text-[16px] font-semibold text-fg">{c.title[lang]}</h3>
                     {c.year && <span className="font-mono text-[12px] text-muted">{c.year}</span>}
                   </div>
-                  <p className="mt-1 text-[14px] text-secondary">{c.issuer}</p>
-                  {c.href && (
-                    <a href={c.href} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-1.5 font-mono text-[12px] text-fg underline decoration-line-strong underline-offset-4 hover:decoration-fg">
-                      {t.resume.view} <span dir="ltr">{displayUrl(c.href)} ↗</span>
-                    </a>
-                  )}
+                  <p className="mt-1 text-[14px] text-secondary" dir="ltr">{c.issuer}</p>
+                  <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[12px]">
+                    {c.href && (
+                      <a href={c.href} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                        {t.resume.verify} <span dir="ltr">{new URL(c.href).hostname} ↗</span>
+                      </a>
+                    )}
+                    {c.file && (
+                      <a href={c.file} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                        {t.resume.pdf} ↗
+                      </a>
+                    )}
+                  </div>
                 </li>
               ))}
             </ul>

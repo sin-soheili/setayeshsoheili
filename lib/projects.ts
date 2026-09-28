@@ -1,16 +1,30 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { projects } from '@/content/projects'
-import type { Project } from '@/content/types'
+import type { Project, ProjectImage } from '@/content/types'
 import { getRepo, type Repo } from './github'
+import { sized } from './image-size'
 import type { Locale } from './i18n'
 
-export type NumberedProject = Project & { number: number; repoData: Repo | null; yearResolved: string | null }
+export type NumberedProject = Omit<Project, 'media' | 'gallery'> & {
+  media?: (ProjectImage & { caption?: Project['summary'] }) | null
+  gallery?: ProjectImage[] | null
+  number: number
+  repoData: Repo | null
+  yearResolved: string | null
+}
 
 /** All listed projects, numbered by their order in content/projects.ts, joined with GitHub data. */
 export const listedProjects: NumberedProject[] = (projects ?? []).map((p, i) => {
   const repoData = getRepo(p.repo)
-  return { ...p, number: i + 1, repoData, yearResolved: p.year ?? repoData?.createdAt.slice(0, 4) ?? null }
+  return {
+    ...p,
+    media: p.media && sized(p.media),
+    gallery: p.gallery?.map(sized),
+    number: i + 1,
+    repoData,
+    yearResolved: p.year ?? repoData?.createdAt.slice(0, 4) ?? null,
+  }
 })
 
 /** Only projects with a summary get their own page. */

@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
-import { profile } from '@/content/profile'
+import { profile, seo } from '@/content/profile'
 import type { Locale, Localized } from './i18n'
 import { SITE_URL } from './site'
+
+export const titleTemplate: Localized<string> = { fa: '%s | ستایش سهیلی', en: '%s — Setayesh Soheili' }
 
 type PageMeta = {
   lang: Locale
@@ -24,6 +26,10 @@ export function pageMetadata({ lang, path, title, description, alternates, absol
   languages['x-default'] = languages.en ?? languages.fa
 
   const url = `/${lang}${path}`
+  // Keep the name in share titles too (the <title> template doesn't apply to og/twitter).
+  const fullTitle = absoluteTitle ? title : titleTemplate[lang].replace('%s', title)
+  // A page-level openGraph replaces the segment's opengraph-image, so fall back to it explicitly.
+  const img = image ?? { url: `/${lang}/opengraph-image`, alt: seo[lang].title }
   return {
     metadataBase: new URL(SITE_URL),
     title: absoluteTitle ? { absolute: title } : title,
@@ -31,15 +37,15 @@ export function pageMetadata({ lang, path, title, description, alternates, absol
     alternates: { canonical: url, languages },
     openGraph: {
       url,
-      title,
+      title: fullTitle,
       description,
       siteName: profile.name[lang],
       locale: lang === 'fa' ? 'fa_IR' : 'en_US',
       ...(article
-        ? { type: 'article', authors: [`${SITE_URL}/${lang}/about`], ...article }
+        ? { type: 'article', authors: [`${SITE_URL}/${lang}`], ...article }
         : { type: 'website' }),
-      ...(image && { images: [{ url: image.url, alt: image.alt }] }),
+      images: [{ url: img.url, alt: img.alt }],
     },
-    twitter: { card: 'summary_large_image', title, description, ...(image && { images: [image.url] }) },
+    twitter: { card: 'summary_large_image', title: fullTitle, description, images: [img.url] },
   }
 }

@@ -23,6 +23,15 @@ export const personJsonLd = (lang: Locale) => ({
   sameAs,
 })
 
+/** Tells Google the homepage is about the person (name searches → this site). */
+export const profilePageJsonLd = (lang: Locale) => ({
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  url: `${SITE_URL}/${lang}`,
+  inLanguage: lang,
+  mainEntity: personJsonLd(lang),
+})
+
 export const websiteJsonLd = (lang: Locale) => ({
   '@context': 'https://schema.org',
   '@type': 'WebSite',

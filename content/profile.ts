@@ -28,9 +28,10 @@ export const seo = {
 
 // href: null hides the link.
 export const links: ContactLink[] = [
-  { label: { fa: 'ایمیل', en: 'Email' }, href: null }, // TODO: 'mailto:…'
+  { label: { fa: 'ایمیل', en: 'Email' }, href: 'mailto:sinsoheili11@gmail.com' },
   { label: { fa: 'گیت‌هاب', en: 'GitHub' }, href: 'https://github.com/sin-soheili' },
   { label: { fa: 'تلگرام', en: 'Telegram' }, href: 'https://t.me/TheNewbieBackpack' },
   { label: { fa: 'کانال توسعه', en: 'Developer channel' }, href: 'https://t.me/backpack_dev' },
-  { label: { fa: 'لینکدین', en: 'LinkedIn' }, href: null }, // TODO
+  { label: { fa: 'لینکدین', en: 'LinkedIn' }, href: 'https://ir.linkedin.com/in/sin-soheili' },
+  { label: { fa: 'اینستاگرام', en: 'Instagram' }, href: 'https://www.instagram.com/setayesh_soheili__/' },
 ]

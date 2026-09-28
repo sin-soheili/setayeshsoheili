@@ -6,6 +6,7 @@ import { blogTranslationMap, getPosts } from '@/lib/blog'
 import { dirOf, otherLocale } from '@/lib/i18n'
 import { allSkills, langParams, resolveLang, type LangParams } from '@/lib/params'
 import { listedProjects, projectPages } from '@/lib/projects'
+import { titleTemplate } from '@/lib/metadata'
 import { SITE_URL } from '@/lib/site'
 import { githubUrl, socials } from '@/lib/social'
 import { Header, type NavItem } from '@/components/chrome/Header'
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }: LangParams): Promise<Metadata
   const { lang } = await resolveLang(params)
   return {
     metadataBase: new URL(SITE_URL),
-    title: { default: seo[lang].title, template: lang === 'fa' ? '%s | ستایش سهیلی' : '%s — Setayesh Soheili' },
+    title: { default: seo[lang].title, template: titleTemplate[lang] },
     description: seo[lang].description,
     applicationName: profile.name[lang],
     authors: [{ name: profile.name[lang], url: `${SITE_URL}/${lang}` }],

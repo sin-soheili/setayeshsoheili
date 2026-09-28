@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { seo } from '@/content/profile'
 import { experience, skills } from '@/content/resume'
 import { github } from '@/lib/github'
-import { personJsonLd, websiteJsonLd } from '@/lib/jsonld'
+import { profilePageJsonLd, websiteJsonLd } from '@/lib/jsonld'
 import { pageMetadata } from '@/lib/metadata'
 import { allSkills, langParams, resolveLang, type LangParams } from '@/lib/params'
 import { featuredProjects, listedProjects } from '@/lib/projects'
@@ -34,7 +34,7 @@ export default async function Home({ params }: LangParams) {
 
   return (
     <>
-      <JsonLd data={personJsonLd(lang)} />
+      <JsonLd data={profilePageJsonLd(lang)} />
       <JsonLd data={websiteJsonLd(lang)} />
 
       <Hero lang={lang} t={t} featured={featuredProjects} stats={stats} />

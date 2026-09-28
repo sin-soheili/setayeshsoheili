@@ -30,19 +30,24 @@ export type Project = {
   /** Other real external links (package page, demo video). */
   links?: { label: Localized; href: string }[] | null
   /** One framed visual under the header — real screenshots only. */
-  media?: ProjectImage & { caption?: Localized } | null
+  media?: ImageInput & { caption?: Localized } | null
   /** Extra real screenshots, shown as a numbered section after the Markdown body. */
-  gallery?: ProjectImage[] | null
+  gallery?: ImageInput[] | null
 }
 
-/** Files under /public/images are optimized at build time. */
-export type ProjectImage = { src: string; alt: Localized; width: number; height: number }
+/** Files under /public/images are optimized at build time; width/height are read from the file. */
+export type ImageInput = { src: string; alt: Localized }
+export type ProjectImage = ImageInput & { width: number; height: number }
 
 export type Certificate = {
   title: Localized
   issuer: string
   year?: string | null
+  /** Verification URL. */
   href?: string | null
+  /** PDF under /public. */
+  file?: string | null
+  image?: ImageInput | null
 }
 
 export type Experience = {
@@ -56,7 +61,7 @@ export type Education = {
   degree: Localized
   institution: Localized
   location?: Localized | null
-  period?: string | null
+  period?: Localized | null
 }
 
 export type SkillGroup = { label: string; items: string[] }
