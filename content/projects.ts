@@ -36,6 +36,50 @@ export const projects: Project[] | null = [
     ],
   },
   {
+  slug: "fadak",
+  title: "Fadak Brick Factory",
+  kind: "client",
+  domain: "Industrial Web",
+  group: "selected",
+  featured: true,
+  tags: [
+    "Industrial Website",
+    "Manufacturing",
+    "Virtual Tour",
+    "SEO"
+  ],
+  stack: [
+    "Next.js",
+    "360° Photography",
+    "Technical SEO"
+  ],
+  summary: {
+    fa: "وب‌سایت صنعتی کارخانه آجر فدک به همراه تجربه تعاملی پانورامای ۳۶۰ درجه برای معرفی محیط کارخانه و فرایند تولید.",
+    en: "An industrial website for Fadak Brick Factory, complemented by an interactive 360° panoramic experience of its production environment."
+  },
+  live: "https://fadakajor.com/",
+  media: {
+    src: "/images/work/fadak/desktop.png",
+    alt: {
+      fa: "وب‌سایت کارخانه آجر فدک",
+      en: "Fadak Brick Factory website"
+    },
+    caption: {
+      fa: "معرفی دیجیتال کارخانه آجر فدک و تجربه تعاملی محیط تولید.",
+      en: "Fadak's digital presence and interactive factory experience."
+    }
+  },
+  links: [
+    {
+      label: {
+        fa: "تجربه تعاملی کارخانه",
+        en: "Interactive Factory Experience"
+      },
+      href: "https://factory.fadakajor.com/"
+    }
+  ]
+},
+  {
     slug: "animasync",
 
     title: "AnimaSync",

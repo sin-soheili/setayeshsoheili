@@ -1,6 +1,8 @@
+@import url("https://cdn.jsdelivr.net/npm/vazirmatn@33.0.3/Vazirmatn-Variable-font-face.css");
 @import 'tailwindcss';
 
 @custom-variant dark (&:where(.dark, .dark *));
+
 
 /* Design tokens (see design.md). Components use the Tailwind names below, never raw hex. */
 :root {
@@ -35,6 +37,11 @@
   --c-contrib-4-border: #09090b;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   color-scheme: light;
+}
+
+html,
+body {
+  font-family: "Vazirmatn", sans-serif;
 }
 
 .dark {

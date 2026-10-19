@@ -3,16 +3,6 @@ import type { Education, Experience, Language, SkillGroup } from './types'
 export const experience: Experience[] | null = [
 
   {
-    title: { fa: 'مهندس نرم‌افزار', en: 'Software Engineer' },
-    org: { fa: 'فریلنس / مستقل', en: 'Freelance / Independent' },
-    period: { fa: '۱۴۰۵ — اکنون', en: '2026 — PRESENT' },
-    description: {
-      fa: 'طراحی و توسعه‌ی نرم‌افزار، backend، ربات‌های پیام‌رسان، automation، API و وب‌اپلیکیشن برای پروژه‌های واقعی.',
-      en: 'Designing and developing software, backend systems, messaging bots, automation workflows, APIs, and web applications for real-world projects.',
-    },
-  },
-
-  {
     title: { fa: 'مدرس آزاد برنامه‌نویسی', en: 'Freelance Programming Instructor' },
     org: { fa: 'آموزش آزاد', en: 'Independent Teaching' },
     period: { fa: '۱۴۰۲ — اکنون', en: '2023 — PRESENT' },
@@ -29,6 +19,16 @@ export const experience: Experience[] | null = [
     description: {
       fa: 'تأسیس و فعالیت در زمینه‌ی طراحی و توسعه‌ی نرم‌افزار، وب‌سایت و ربات‌های پیام‌رسان.',
       en: 'Founded and operating a software development company focused on designing and developing software, websites, and messaging bots.',
+    },
+  },
+
+  {
+    title: { fa: 'مهندس نرم‌افزار', en: 'Software Engineer' },
+    org: { fa: 'فریلنس / مستقل', en: 'Freelance / Independent' },
+    period: { fa: '۱۴۰۵ — اکنون', en: '2026 — PRESENT' },
+    description: {
+      fa: 'طراحی و توسعه‌ی نرم‌افزار، backend، ربات‌های پیام‌رسان، automation، API و وب‌اپلیکیشن برای پروژه‌های واقعی.',
+      en: 'Designing and developing software, backend systems, messaging bots, automation workflows, APIs, and web applications for real-world projects.',
     },
   },
 ]
