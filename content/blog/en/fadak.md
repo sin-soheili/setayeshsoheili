@@ -1,5 +1,5 @@
 ---
-title: From Factory to Web: The Fadak Brick Project
+title: From Factory to Web, The Fadak Brick Project
 description: My experience developing the Fadak Brick website, visiting the factory, and exploring a 360° virtual tour to bring the production environment online.
 date: 2026-10-19
 category: Projects / Case Studies
