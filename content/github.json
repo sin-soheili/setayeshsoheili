@@ -1,8 +1,22 @@
 {
   "user": "sin-soheili",
   "profileUrl": "https://github.com/sin-soheili",
-  "fetchedAt": "2026-09-27T09:54:40.006Z",
+  "fetchedAt": "2026-10-19T15:18:25.754Z",
   "repos": [
+    {
+      "name": "setayeshsoheili",
+      "url": "https://github.com/sin-soheili/setayeshsoheili",
+      "description": null,
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "license": null,
+      "homepage": null,
+      "topics": [],
+      "createdAt": "2026-09-27T10:00:20Z",
+      "pushedAt": "2026-09-28T17:14:16Z",
+      "latestRelease": null
+    },
     {
       "name": "ChatPack",
       "url": "https://github.com/sin-soheili/ChatPack",
@@ -69,7 +83,7 @@
       "url": "https://github.com/sin-soheili/Mope",
       "description": "Todo-map",
       "language": "CSS",
-      "stars": 3,
+      "stars": 0,
       "forks": 0,
       "license": null,
       "homepage": null,
@@ -80,6 +94,69 @@
     }
   ],
   "events": [
+    {
+      "type": "commit",
+      "repo": "setayeshsoheili",
+      "date": "2026-09-28T17:14:07Z",
+      "text": "Refactor code structure for improved readability and maintainability",
+      "url": "https://github.com/sin-soheili/setayeshsoheili/commit/fe7c1c8c0e65c577260b30988f122375dc1ef8b5"
+    },
+    {
+      "type": "commit",
+      "repo": "setayeshsoheili",
+      "date": "2026-09-28T17:06:59Z",
+      "text": "new changes structure + content",
+      "url": "https://github.com/sin-soheili/setayeshsoheili/commit/b41decfdca33c3b012ce25d4085e1114e585bcd7"
+    },
+    {
+      "type": "commit",
+      "repo": "setayeshsoheili",
+      "date": "2026-09-27T20:22:24Z",
+      "text": "delete icon",
+      "url": "https://github.com/sin-soheili/setayeshsoheili/commit/bc16ccffe98a6e0d7bff8cc23ea796e45258e83e"
+    },
+    {
+      "type": "commit",
+      "repo": "setayeshsoheili",
+      "date": "2026-09-27T20:15:43Z",
+      "text": "added new projects + article",
+      "url": "https://github.com/sin-soheili/setayeshsoheili/commit/b02906c196be625e05ab6111ebd3e04f44f450d9"
+    },
+    {
+      "type": "commit",
+      "repo": "setayeshsoheili",
+      "date": "2026-09-27T11:04:20Z",
+      "text": "first blog",
+      "url": "https://github.com/sin-soheili/setayeshsoheili/commit/9dab84bc6ac19622b1761e11918039d2a1d28945"
+    },
+    {
+      "type": "commit",
+      "repo": "setayeshsoheili",
+      "date": "2026-09-27T11:03:36Z",
+      "text": "Use monogram logo for favicon, apple-icon, manifest, and header logo",
+      "url": "https://github.com/sin-soheili/setayeshsoheili/commit/b0aac572f980a73cb087f83adc272ce707e92111"
+    },
+    {
+      "type": "commit",
+      "repo": "setayeshsoheili",
+      "date": "2026-09-27T10:09:17Z",
+      "text": "Make root redirect to /fa permanent (301) instead of temporary",
+      "url": "https://github.com/sin-soheili/setayeshsoheili/commit/7b846cfcfc562cf32eaea07b9ce07f5001ff463b"
+    },
+    {
+      "type": "commit",
+      "repo": "setayeshsoheili",
+      "date": "2026-09-27T10:01:10Z",
+      "text": "Initial commit: personal site",
+      "url": "https://github.com/sin-soheili/setayeshsoheili/commit/a3a2c1d4a111770fdb672ff4dae9262e8e8c60df"
+    },
+    {
+      "type": "repo",
+      "repo": "setayeshsoheili",
+      "date": "2026-09-27T10:00:20Z",
+      "text": null,
+      "url": "https://github.com/sin-soheili/setayeshsoheili"
+    },
     {
       "type": "release",
       "repo": "ChatPack",
@@ -285,113 +362,8 @@
     }
   ],
   "contributions": {
-    "total": 301,
+    "total": 326,
     "days": [
-      {
-        "date": "2025-09-28",
-        "level": 0,
-        "count": 0
-      },
-      {
-        "date": "2025-09-29",
-        "level": 0,
-        "count": 0
-      },
-      {
-        "date": "2025-09-30",
-        "level": 1,
-        "count": 1
-      },
-      {
-        "date": "2025-10-01",
-        "level": 2,
-        "count": 5
-      },
-      {
-        "date": "2025-10-02",
-        "level": 0,
-        "count": 0
-      },
-      {
-        "date": "2025-10-03",
-        "level": 0,
-        "count": 0
-      },
-      {
-        "date": "2025-10-04",
-        "level": 3,
-        "count": 6
-      },
-      {
-        "date": "2025-10-05",
-        "level": 0,
-        "count": 0
-      },
-      {
-        "date": "2025-10-06",
-        "level": 2,
-        "count": 3
-      },
-      {
-        "date": "2025-10-07",
-        "level": 1,
-        "count": 1
-      },
-      {
-        "date": "2025-10-08",
-        "level": 2,
-        "count": 4
-      },
-      {
-        "date": "2025-10-09",
-        "level": 0,
-        "count": 0
-      },
-      {
-        "date": "2025-10-10",
-        "level": 0,
-        "count": 0
-      },
-      {
-        "date": "2025-10-11",
-        "level": 1,
-        "count": 2
-      },
-      {
-        "date": "2025-10-12",
-        "level": 2,
-        "count": 4
-      },
-      {
-        "date": "2025-10-13",
-        "level": 2,
-        "count": 3
-      },
-      {
-        "date": "2025-10-14",
-        "level": 2,
-        "count": 3
-      },
-      {
-        "date": "2025-10-15",
-        "level": 1,
-        "count": 2
-      },
-      {
-        "date": "2025-10-16",
-        "level": 0,
-        "count": 0
-      },
-      {
-        "date": "2025-10-17",
-        "level": 1,
-        "count": 2
-      },
-      {
-        "date": "2025-10-18",
-        "level": 1,
-        "count": 2
-      },
       {
         "date": "2025-10-19",
         "level": 1,
@@ -454,7 +426,7 @@
       },
       {
         "date": "2025-10-31",
-        "level": 3,
+        "level": 2,
         "count": 6
       },
       {
@@ -684,17 +656,17 @@
       },
       {
         "date": "2025-12-16",
-        "level": 2,
+        "level": 1,
         "count": 3
       },
       {
         "date": "2025-12-17",
-        "level": 3,
+        "level": 2,
         "count": 6
       },
       {
         "date": "2025-12-18",
-        "level": 2,
+        "level": 1,
         "count": 3
       },
       {
@@ -719,7 +691,7 @@
       },
       {
         "date": "2025-12-23",
-        "level": 3,
+        "level": 2,
         "count": 6
       },
       {
@@ -1024,7 +996,7 @@
       },
       {
         "date": "2026-02-22",
-        "level": 3,
+        "level": 2,
         "count": 6
       },
       {
@@ -1539,7 +1511,7 @@
       },
       {
         "date": "2026-06-05",
-        "level": 4,
+        "level": 3,
         "count": 9
       },
       {
@@ -1599,7 +1571,7 @@
       },
       {
         "date": "2026-06-17",
-        "level": 2,
+        "level": 1,
         "count": 3
       },
       {
@@ -1709,7 +1681,7 @@
       },
       {
         "date": "2026-07-09",
-        "level": 3,
+        "level": 2,
         "count": 6
       },
       {
@@ -2004,7 +1976,7 @@
       },
       {
         "date": "2026-09-06",
-        "level": 4,
+        "level": 3,
         "count": 9
       },
       {
@@ -2024,7 +1996,7 @@
       },
       {
         "date": "2026-09-10",
-        "level": 3,
+        "level": 2,
         "count": 6
       },
       {
@@ -2099,8 +2071,8 @@
       },
       {
         "date": "2026-09-25",
-        "level": 3,
-        "count": 6
+        "level": 1,
+        "count": 1
       },
       {
         "date": "2026-09-26",
@@ -2109,6 +2081,116 @@
       },
       {
         "date": "2026-09-27",
+        "level": 3,
+        "count": 8
+      },
+      {
+        "date": "2026-09-28",
+        "level": 2,
+        "count": 6
+      },
+      {
+        "date": "2026-09-29",
+        "level": 1,
+        "count": 3
+      },
+      {
+        "date": "2026-09-30",
+        "level": 2,
+        "count": 5
+      },
+      {
+        "date": "2026-10-01",
+        "level": 0,
+        "count": 0
+      },
+      {
+        "date": "2026-10-02",
+        "level": 0,
+        "count": 0
+      },
+      {
+        "date": "2026-10-03",
+        "level": 4,
+        "count": 13
+      },
+      {
+        "date": "2026-10-04",
+        "level": 4,
+        "count": 11
+      },
+      {
+        "date": "2026-10-05",
+        "level": 1,
+        "count": 2
+      },
+      {
+        "date": "2026-10-06",
+        "level": 1,
+        "count": 1
+      },
+      {
+        "date": "2026-10-07",
+        "level": 2,
+        "count": 5
+      },
+      {
+        "date": "2026-10-08",
+        "level": 0,
+        "count": 0
+      },
+      {
+        "date": "2026-10-09",
+        "level": 3,
+        "count": 7
+      },
+      {
+        "date": "2026-10-10",
+        "level": 0,
+        "count": 0
+      },
+      {
+        "date": "2026-10-11",
+        "level": 1,
+        "count": 1
+      },
+      {
+        "date": "2026-10-12",
+        "level": 2,
+        "count": 6
+      },
+      {
+        "date": "2026-10-13",
+        "level": 0,
+        "count": 0
+      },
+      {
+        "date": "2026-10-14",
+        "level": 0,
+        "count": 0
+      },
+      {
+        "date": "2026-10-15",
+        "level": 0,
+        "count": 0
+      },
+      {
+        "date": "2026-10-16",
+        "level": 0,
+        "count": 0
+      },
+      {
+        "date": "2026-10-17",
+        "level": 0,
+        "count": 0
+      },
+      {
+        "date": "2026-10-18",
+        "level": 0,
+        "count": 0
+      },
+      {
+        "date": "2026-10-19",
         "level": 0,
         "count": 0
       }

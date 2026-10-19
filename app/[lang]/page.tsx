@@ -16,6 +16,8 @@ import { AboutSection } from '@/components/home/About'
 
 export const generateStaticParams = langParams
 
+
+
 export async function generateMetadata({ params }: LangParams): Promise<Metadata> {
   const { lang } = await resolveLang(params)
   return pageMetadata({ lang, path: '', title: seo[lang].title, description: seo[lang].description, absoluteTitle: true })
@@ -31,9 +33,90 @@ export default async function Home({ params }: LangParams) {
     { value: github.contributions.total, label: t.hero.stats.contributions },
     { value: allSkills.length, label: t.hero.stats.tools },
   ]
-
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "@id": "https://setayesh-soheili.ir/fa/#page",
+        "url": "https://setayesh-soheili.ir/fa/",
+        "name": "ستایش سهیلی — مهندس نرم‌افزار و تحلیلگر کسب‌وکار",
+        "inLanguage": "fa",
+        "isPartOf": {
+          "@id": "https://setayesh-soheili.ir/#website"
+        },
+        "mainEntity": {
+          "@id": "https://setayesh-soheili.ir/#person"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://setayesh-soheili.ir/#website",
+        "url": "https://setayesh-soheili.ir/",
+        "name": "Setayesh Soheili",
+        "alternateName": [
+          "ستایش سهیلی",
+          "Setayesh Soheili",
+          "BackpackDev"
+        ],
+        "inLanguage": ["fa", "en"],
+        "publisher": {
+          "@id": "https://setayesh-soheili.ir/#person"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://setayesh-soheili.ir/#person",
+        "name": "Setayesh Soheili",
+        "alternateName": [
+          "ستایش سهیلی",
+          "ستایش سهیلی‌نژاد",
+          "Setayesh Soheili",
+          "BackpackDev"
+        ],
+        "jobTitle": "Business Analyst & Software Engineer",
+        "description": "ستایش سهیلی، تحلیلگر کسب‌وکار و مهندس نرم‌افزار است که در طراحی و توسعه سیستم‌های دیجیتال، تحلیل مسائل کسب‌وکار و تبدیل مسائل واقعی کسب‌وکار به راهکارهای نرم‌افزاری فعالیت می‌کند.",
+        "url": "https://setayesh-soheili.ir/",
+        "knowsLanguage": ["fa", "en"],
+        "knowsAbout": [
+          "Business Analysis",
+          "Business Solutions",
+          "System Design",
+          "Software Engineering",
+          "Python",
+          "Django",
+          "FastAPI",
+          "REST API",
+          "PostgreSQL",
+          "SQLite",
+          "Redis",
+          "SQLAlchemy",
+          "Linux",
+          "Docker",
+          "Backend Development",
+          "Database Design",
+          "Business Process Analysis",
+          "Digital Systems",
+          "Automation",
+          "Telegram Bots",
+          "Web Scraping"
+        ],
+        "sameAs": [
+          "https://t.me/thenewbiebackpack",
+          "https://t.me/backpack_dev",
+          "https://github.com/sin-soheili"
+        ]
+      }
+    ]
+  };
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
       <JsonLd data={profilePageJsonLd(lang)} />
       <JsonLd data={websiteJsonLd(lang)} />
 
