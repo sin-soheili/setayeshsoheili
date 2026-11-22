@@ -4,6 +4,19 @@ import type { Project } from "./types";
 // Order = archive order. Set to null (or []) to hide the work archive entirely.
 export const projects: Project[] | null = [
   {
+    slug: "daypack",
+    title: "Daypack",
+    domain: "Web",
+    group: "selected",
+    featured: true,
+    tags: ["Daily Planning", "Tasks", "Habits"],
+    live: "https://daypack.setayesh-soheili.ir/",
+    summary: {
+      fa: "یک برنامه برای برنامه‌ریزی روزانه و پیگیری کارها، عادت‌ها و هدف‌ها، با تمرکز بر نگه‌داشتن اطلاعات روی دستگاه خودت و گرفتن نسخهٔ پشتیبان.",
+      en: "An app for planning your days and keeping track of tasks, habits, and goals, built around keeping your data on your own device and being able to back it up.",
+    },
+  },
+  {
     slug: "chatpack",
     title: "ChatPack",
     kind: "open-source",
@@ -25,8 +38,8 @@ export const projects: Project[] | null = [
       },
     },
     summary: {
-      fa: "مجموعه‌ای از ابزارها و زیرساخت‌ها برای ساخت تجربه‌های تعاملی در ربات‌های پیام‌رسان.",
-      en: "A collection of tools and infrastructure for building interactive experiences in messaging bots.",
+      fa: "ابزاری برای ساخت ربات‌های تلگرام که می‌توانند از کاربر سؤال بپرسند، جواب بگیرند و عکس جمع کنند.",
+      en: "Tools for building Telegram bots that can ask questions, collect answers, and receive photos.",
     },
     links: [
       {
@@ -54,8 +67,8 @@ export const projects: Project[] | null = [
     "Technical SEO"
   ],
   summary: {
-    fa: "وب‌سایت صنعتی کارخانه آجر فدک به همراه تجربه تعاملی پانورامای ۳۶۰ درجه برای معرفی محیط کارخانه و فرایند تولید.",
-    en: "An industrial website for Fadak Brick Factory, complemented by an interactive 360° panoramic experience of its production environment."
+    fa: "وب‌سایت کارخانه آجر فدک با بازدید مجازی ۳۶۰ درجه از محیط کارخانه و آشنایی با فرایند تولید آجر.",
+    en: "A website for Fadak Brick Factory, with a 360-degree virtual tour of the factory and a look at how the bricks are made."
   },
   live: "https://fadakajor.com/",
   media: {
@@ -111,9 +124,9 @@ export const projects: Project[] | null = [
     },
 
     summary: {
-      fa: "یک ابزار سبک برای ساخت lip-sync در انیمیشن‌های دوبعدی؛ با تمرکز روی کنترل فریم‌ها و یک workflow ساده برای صدا، پیش‌نمایش و خروجی.",
+      fa: "ابزاری که حرکت دهان شخصیت‌های انیمیشن دوبعدی را با صدای گفت‌وگو هماهنگ می‌کند.",
 
-      en: "A lightweight tool for 2D animation lip-sync, focused on frame control and a simple workflow for audio, preview, and export.",
+      en: "A tool that matches a 2D animated character’s mouth movements to recorded dialogue.",
     },
   },
   {
@@ -127,8 +140,8 @@ export const projects: Project[] | null = [
     stack: ["Python", "cryptography", "Rich"],
     repo: "SafePad",
     summary: {
-      fa: "یک برنامه‌ی ترمینالی برای مدیریت یادداشت‌های رمزنگاری‌شده.",
-      en: "A terminal-based manager for encrypted notes.",
+      fa: "ابزاری برای نوشتن و نگه‌داشتن یادداشت‌های رمزگذاری‌شده، قابل استفاده با دستورهای متنی.",
+      en: "A tool for writing and storing encrypted notes using text commands.",
     },
   },
   {
@@ -188,8 +201,8 @@ export const projects: Project[] | null = [
     stack: ["JavaScript", "VS Code"],
     repo: "leecode",
     summary: {
-      fa: "یک افزونه‌ی انتخاب رنگ (Color Picker) برای Visual Studio Code.",
-      en: "A color picker extension for Visual Studio Code.",
+      fa: "ابزاری برای انتخاب رنگ داخل ویرایشگر کد Visual Studio Code.",
+      en: "A tool for picking colors inside the Visual Studio Code editor.",
     },
     media: {
       src: "/images/work/leecode/color-picker.webp",
@@ -209,8 +222,8 @@ export const projects: Project[] | null = [
     tags: ["Digital Menu", "Django", "Tailwind"],
     stack: ["Python", "Django", "Tailwind CSS"],
     summary: {
-      fa: "منوی آنلاین اختصاصی کافه قرار، همراه با پنل مدیریت برای مدیریت آیتم‌ها، دسته‌بندی‌ها، قیمت‌ها و محتوای منو.",
-      en: "A custom digital menu for Gharar Cafe, with a dedicated management panel for managing menu items, categories, prices, and content.",
+      fa: "منوی آنلاین کافه قرار که کارکنان کافه می‌توانند گزینه‌ها، دسته‌بندی‌ها و قیمت‌هایش را به‌روزرسانی کنند.",
+      en: "An online menu for Gharar Cafe that staff can update with new items, categories, and prices.",
     },
     live: "https://ghararcafe.ir/",
     media: {
@@ -235,8 +248,8 @@ export const projects: Project[] | null = [
     tags: ["Business Website", "Django", "Tailwind"],
     stack: ["Python", "Django", "Tailwind CSS"],
     summary: {
-      fa: "وبسایت شخصی رضا پیری، شامل معرفی خدمات، امکان اجاره تجهیزات عکاسی، رزرو وقت مشاوره بیزنس کوچینگ و فرم ارتباط با مخاطبان.",
-      en: "A personal website for Reza Piri, featuring service introduction, photography equipment rental, business coaching consultation booking, and a contact form.",
+      fa: "وب‌سایت رضا پیری برای معرفی خدمات، اجارهٔ تجهیزات عکاسی، رزرو مشاورهٔ کسب‌وکار و تماس.",
+      en: "Reza Piri’s website for browsing services, renting photography equipment, booking a business consultation, and getting in touch.",
     },
     live: "http://website.rezapiri.ir/",
     media: {
@@ -261,8 +274,8 @@ export const projects: Project[] | null = [
   tags: ["3D Web", "Interactive Atlas", "AI Assisted"],
   stack: ["Three.js", "WebGL", "JavaScript", "AI Tools"],
   summary: {
-    fa: "اطلس تعاملی سه‌بعدی لپ‌تاپ که امکان مشاهده، جداسازی و بررسی اجزای داخلی دستگاه مانند مادربرد، CPU، GPU، RAM، NVMe، باتری و سیستم خنک‌کننده را فراهم می‌کند.",
-    en: "An interactive 3D laptop atlas that allows users to explore, separate, and inspect internal components such as the motherboard, CPU, GPU, RAM, NVMe, battery, and cooling system.",
+    fa: "یک مدل سه‌بعدی از لپ‌تاپ که می‌توانی قطعه‌های داخلش را جدا کنی و از نزدیک ببینی.",
+    en: "A 3D laptop model you can take apart to see what’s inside.",
   },
   live: "https://lapatlas.samansoheili-is-here.workers.dev/",
   gallery: [

@@ -7,8 +7,8 @@ export const profile = {
   focus: ['Python', 'Backend', 'Bots', 'Automation'],
   location: { fa: 'گرگان، ایران', en: 'Gorgan, Iran' },
   summary: {
-    fa: 'برنامه‌نویس نرم‌افزار با تمرکز روی Python، backend، ربات‌ها و automation. تجربه‌ی ساخت پروژه‌های واقعی و کار با سرویس‌ها و سیستم‌های مختلف.',
-    en: 'Software Engineer focused on Python, backend development, bots, automation, and web software. Experienced in building real-world projects across different software systems and services.',
+    fa: 'وب‌سایت، ربات پیام‌رسان و ابزارهایی می‌سازم که کارهای تکراری را خودکار می‌کنند.',
+    en: 'I build websites, messaging bots, and tools that take care of repetitive tasks.',
   },
   knowsAbout: ['Python', 'Backend Development', 'Web Development', 'Telegram Bots', 'Automation'],
 }

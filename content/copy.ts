@@ -19,42 +19,34 @@ const fa = {
   },
 
   hero: {
-    kicker: 'توسعه‌دهنده‌ی نرم‌افزار در گرگان',
+    kicker: 'مهندس نرم‌افزار',
     viewProjects: 'دیدن پروژه‌ها',
     resume: 'مشاهده‌ی رزومه',
-    stats: {
-      projects: 'پروژه',
-      repos: 'مخزن عمومی',
-      contributions: 'مشارکت در گیت‌هاب',
-      tools: 'ابزار',
-    },
-    showcase: 'چند پروژه',
-    prev: 'پروژه‌ی قبلی',
-    next: 'پروژه‌ی بعدی',
-    goTo: (n: number) => `رفتن به پروژه‌ی ${n.toLocaleString('fa-IR')}`,
+    showcase: 'پروژه‌های منتخب',
+    allProjects: 'همهٔ پروژه‌ها',
   },
 
   experience: {
     kicker: 'تجربه',
-    title: 'مسیر کاری من تا امروز.',
+    title: 'سابقهٔ کاری',
   },
 
   capabilities: {
     kicker: 'مهارت‌ها',
-    title: 'ابزارهایی که استفاده می‌کنم.',
-    description: 'بیشتر با Python، توسعه‌ی بک‌اند، ربات‌ها، خودکارسازی و وب کار می‌کنم.',
+    title: 'ابزارهایی که با آن‌ها کار می‌کنم',
+    description: 'از این ابزارها برای ساخت وب‌سایت، پردازش اطلاعات، ساخت ربات و خودکار کردن کارهای تکراری استفاده می‌کنم.',
     tools: (n: number) => `${n.toLocaleString('fa-IR')} ابزار`,
     github: 'گیت‌هاب من',
   },
 
   activity: {
     kicker: 'گیت‌هاب',
-    title: 'این روزها در گیت‌هاب.',
-    description: 'مخزن‌های عمومی و بخشی از فعالیت‌های من در گیت‌هاب.',
+    title: 'کدها و تغییرات اخیر',
+    description: 'اینجا می‌توانی کدهای عمومی و آخرین تغییراتی را که در گیت‌هاب ثبت کرده‌ام ببینی.',
     contributions: 'مشارکت‌ها در یک سال گذشته',
     less: 'کمتر',
     more: 'بیشتر',
-    repositories: 'مخزن‌ها',
+    repositories: 'کد پروژه‌ها',
     recent: 'فعالیت‌های اخیر',
     type: {
       commit: 'ثبت تغییرات',
@@ -69,7 +61,7 @@ const fa = {
     title: 'کمی درباره‌ی مسیرم.',
     description: 'توسعه‌دهنده‌ی نرم‌افزار، ساکن گرگان.',
 
-    lead: 'کارم را با فرانت‌اند شروع کردم و بعد سراغ بخش‌های دیگر نرم‌افزار رفتم. حالا بیشتر با Python و بک‌اند کار می‌کنم؛ از ساخت API و ربات گرفته تا خودکار کردن کارهای تکراری. بخش زیادی از تجربه‌ام را حین انجام پروژه‌ها به دست آورده‌ام.',
+    lead: 'از شبکه شروع کردم و بعد سراغ ساخت وب‌سایت رفتم. حالا بیشتر با پایتون روی بخش‌هایی کار می‌کنم که پشت صحنه اطلاعات را ذخیره می‌کنند و برنامه‌ها را به هم وصل می‌کنند. بیشتر تجربه‌ام را حین ساخت پروژه‌ها به دست آورده‌ام.',
 
     notes: [
       'قبل از شروع پیاده‌سازی، سعی می‌کنم بفهمم دقیقاً چه چیزی قرار است ساخته شود و چه نیازی را برطرف کند. گاهی مسئله با کدنویسی حل می‌شود و گاهی باید اول خود مسئله را روشن‌تر کرد.',
@@ -223,42 +215,34 @@ const en: typeof fa = {
   },
 
   hero: {
-    kicker: 'Software developer based in Gorgan, Iran',
+    kicker: 'Software Engineer',
     viewProjects: 'View projects',
     resume: 'View résumé',
-    stats: {
-      projects: 'Projects',
-      repos: 'Public repositories',
-      contributions: 'GitHub contributions',
-      tools: 'Tools',
-    },
     showcase: 'Selected projects',
-    prev: 'Previous project',
-    next: 'Next project',
-    goTo: (n: number) => `Go to project ${n}`,
+    allProjects: 'All projects',
   },
 
   experience: {
     kicker: 'Experience',
-    title: 'Where I’ve worked so far.',
+    title: 'Work experience',
   },
 
   capabilities: {
     kicker: 'Skills',
-    title: 'Tools I use.',
-    description: 'Most of my work involves Python, backend development, bots, automation, and the web.',
+    title: 'Tools I use',
+    description: 'I use these tools to build websites, work with data, create bots, and automate repetitive tasks.',
     tools: (n: number) => `${n} tools`,
     github: 'My GitHub profile',
   },
 
   activity: {
     kicker: 'GitHub',
-    title: 'What I’ve been up to on GitHub.',
-    description: 'My public repositories and some of my recent activity.',
+    title: 'Code and recent updates',
+    description: 'See the code I share publicly and the latest changes I’ve made on GitHub.',
     contributions: 'Contributions over the past year',
     less: 'Less',
     more: 'More',
-    repositories: 'Repositories',
+    repositories: 'Project code',
     recent: 'Recent activity',
     type: {
       commit: 'Commit',
@@ -273,7 +257,7 @@ const en: typeof fa = {
     title: 'A bit about my work.',
     description: 'Software developer based in Gorgan, Iran.',
 
-    lead: 'I started out in frontend development and gradually moved into other parts of software engineering. These days, I mostly work with Python and backend systems, building APIs, messaging bots, and tools that automate repetitive tasks. Much of my experience has come from working on actual projects.',
+    lead: 'I started with computer networking and then moved into building websites. These days I mostly use Python for the work that happens behind the scenes, like storing information and connecting apps. I learned most of this by building projects.',
 
     notes: [
       'Before I start building something, I try to understand what it needs to do and why. Sometimes that means writing code; sometimes it means getting a clearer picture of the problem first.',

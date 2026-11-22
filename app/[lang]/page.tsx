@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
 import { seo } from '@/content/profile'
 import { experience, skills } from '@/content/resume'
-import { github } from '@/lib/github'
 import { profilePageJsonLd, websiteJsonLd } from '@/lib/jsonld'
 import { pageMetadata } from '@/lib/metadata'
-import { allSkills, langParams, resolveLang, type LangParams } from '@/lib/params'
-import { featuredProjects, listedProjects } from '@/lib/projects'
+import { langParams, resolveLang, type LangParams } from '@/lib/params'
+import { featuredProjects } from '@/lib/projects'
 import { githubUrl, socials } from '@/lib/social'
 import { Container, JsonLd, OutlineButton, SectionHeader } from '@/components/ui/primitives'
 import { Hero } from '@/components/home/Hero'
@@ -16,8 +15,6 @@ import { AboutSection } from '@/components/home/About'
 
 export const generateStaticParams = langParams
 
-
-
 export async function generateMetadata({ params }: LangParams): Promise<Metadata> {
   const { lang } = await resolveLang(params)
   return pageMetadata({ lang, path: '', title: seo[lang].title, description: seo[lang].description, absoluteTitle: true })
@@ -26,101 +23,12 @@ export async function generateMetadata({ params }: LangParams): Promise<Metadata
 export default async function Home({ params }: LangParams) {
   const { lang, t } = await resolveLang(params)
 
-  // Only counts that can be verified from content and the GitHub snapshot.
-  const stats = [
-    { value: listedProjects.length, label: t.hero.stats.projects },
-    { value: github.repos.length, label: t.hero.stats.repos },
-    { value: github.contributions.total, label: t.hero.stats.contributions },
-    { value: allSkills.length, label: t.hero.stats.tools },
-  ]
-  const schema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ProfilePage",
-        "@id": "https://setayesh-soheili.ir/fa/#page",
-        "url": "https://setayesh-soheili.ir/fa/",
-        "name": "ستایش سهیلی — مهندس نرم‌افزار و تحلیلگر کسب‌وکار",
-        "inLanguage": "fa",
-        "isPartOf": {
-          "@id": "https://setayesh-soheili.ir/#website"
-        },
-        "mainEntity": {
-          "@id": "https://setayesh-soheili.ir/#person"
-        }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://setayesh-soheili.ir/#website",
-        "url": "https://setayesh-soheili.ir/",
-        "name": "Setayesh Soheili",
-        "alternateName": [
-          "ستایش سهیلی",
-          "Setayesh Soheili",
-          "BackpackDev"
-        ],
-        "inLanguage": ["fa", "en"],
-        "publisher": {
-          "@id": "https://setayesh-soheili.ir/#person"
-        }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://setayesh-soheili.ir/#person",
-        "name": "Setayesh Soheili",
-        "alternateName": [
-          "ستایش سهیلی",
-          "ستایش سهیلی‌نژاد",
-          "Setayesh Soheili",
-          "BackpackDev"
-        ],
-        "jobTitle": "Business Analyst & Software Engineer",
-        "description": "ستایش سهیلی، تحلیلگر کسب‌وکار و مهندس نرم‌افزار است که در طراحی و توسعه سیستم‌های دیجیتال، تحلیل مسائل کسب‌وکار و تبدیل مسائل واقعی کسب‌وکار به راهکارهای نرم‌افزاری فعالیت می‌کند.",
-        "url": "https://setayesh-soheili.ir/",
-        "knowsLanguage": ["fa", "en"],
-        "knowsAbout": [
-          "Business Analysis",
-          "Business Solutions",
-          "System Design",
-          "Software Engineering",
-          "Python",
-          "Django",
-          "FastAPI",
-          "REST API",
-          "PostgreSQL",
-          "SQLite",
-          "Redis",
-          "SQLAlchemy",
-          "Linux",
-          "Docker",
-          "Backend Development",
-          "Database Design",
-          "Business Process Analysis",
-          "Digital Systems",
-          "Automation",
-          "Telegram Bots",
-          "Web Scraping"
-        ],
-        "sameAs": [
-          "https://t.me/thenewbiebackpack",
-          "https://t.me/backpack_dev",
-          "https://github.com/sin-soheili"
-        ]
-      }
-    ]
-  };
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(schema),
-        }}
-      />
       <JsonLd data={profilePageJsonLd(lang)} />
       <JsonLd data={websiteJsonLd(lang)} />
 
-      <Hero lang={lang} t={t} featured={featuredProjects} stats={stats} />
+      <Hero lang={lang} t={t} featured={featuredProjects} />
 
       <section id="experience" aria-labelledby="experience-title" className="scroll-mt-[80px] pb-10 pt-4 sm:pb-12 sm:pt-8 md:pb-14 md:pt-12 lg:pb-16 lg:pt-16">
         <Container>
